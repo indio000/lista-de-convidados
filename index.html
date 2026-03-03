@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convidados - Listas</title>
+    <title>Listas de Convidados - Exibição Interativa</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Lista de Convidados</h1>
+        <div class="header-container">
+            <h1>Lista de Convidados</h1>
+            <p>Exibição interativa das listas de convidados com base em diferentes critérios.</p>
+        </div>
     </header>
-    
+
     <main>
-        <section id="list-maiusculas">
-            <h2>1. Nomes em Maiúsculas</h2>
-            <ul id="maiusculas"></ul>
-        </section>
+        <div class="list-container">
+            <section id="list-maiusculas" class="list-box">
+                <h2>1. Nomes em Maiúsculas</h2>
+                <ul id="maiusculas"></ul>
+            </section>
 
-        <section id="list-com-A">
-            <h2>2. Nomes que começam com 'A'</h2>
-            <ul id="com-a"></ul>
-        </section>
+            <section id="list-com-A" class="list-box">
+                <h2>2. Nomes que começam com 'A'</h2>
+                <ul id="com-a"></ul>
+            </section>
 
-        <section id="list-longos">
-            <h2>3. Nomes com mais de 5 Letras</h2>
-            <ul id="longos"></ul>
-        </section>
+            <section id="list-longos" class="list-box">
+                <h2>3. Nomes com mais de 5 Letras</h2>
+                <ul id="longos"></ul>
+            </section>
+        </div>
         
         <footer>
-            <p id="total-a"></p>
+            <p id="total-a" class="footer-text"></p>
         </footer>
     </main>
 
     <script src="script.js"></script>
 </body>
+
 </html>
