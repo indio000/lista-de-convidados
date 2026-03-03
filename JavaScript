@@ -1,45 +1,45 @@
 // Lista de convidados
 const convidados = ["Ana", "Bruno", "Amanda", "Carlos", "Beatriz", "Alberto", "Daniela"];
 
-// Função para processar os dados e exibir as listas
+// Função principal que organiza as listas
 function processarListas() {
     let nomesMaiusculos = [];
     let nomesComA = [];
     let nomesLongos = [];
     let contadorA = 0;
 
-    // Loop para iterar sobre os convidados
+    // Iterando sobre os nomes com range()
     for (let i = 0; i < convidados.length; i++) {
         let nome = convidados[i];
 
-        // Nomes em maiúsculas
+        // Adicionando os nomes em maiúsculas
         nomesMaiusculos.push(nome.toUpperCase());
 
-        // Nomes que começam com 'A'
+        // Contando e adicionando nomes que começam com 'A'
         if (nome[0].toUpperCase() === 'A') {
             nomesComA.push(nome);
             contadorA++;
         }
 
-        // Nomes com mais de 5 letras
+        // Adicionando nomes com mais de 5 letras
         if (nome.length > 5) {
             nomesLongos.push(nome);
         }
     }
 
-    // Exibir listas no HTML
+    // Exibindo as listas de convidados na página
     exibirLista('maiusculas', nomesMaiusculos);
     exibirLista('com-a', nomesComA);
     exibirLista('longos', nomesLongos);
     
-    // Exibir quantidade de nomes que começam com 'A'
-    document.getElementById('total-a').innerText = `Total de nomes que começam com 'A': ${contadorA}`;
+    // Exibindo o número de nomes que começam com a letra 'A'
+    document.getElementById('total-a').textContent = `Total de nomes que começam com 'A': ${contadorA}`;
 }
 
-// Função para exibir uma lista no HTML
+// Função para exibir a lista na página
 function exibirLista(id, lista) {
     const ul = document.getElementById(id);
-    ul.innerHTML = '';
+    ul.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
     lista.forEach(nome => {
         const li = document.createElement('li');
         li.textContent = nome;
@@ -47,5 +47,5 @@ function exibirLista(id, lista) {
     });
 }
 
-// Chama a função para processar e exibir as listas
-processarListas();
+// Chama a função para processar e exibir as listas assim que a página for carregada
+document.addEventListener('DOMContentLoaded', processarListas);
