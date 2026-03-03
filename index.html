@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listas de Convidados - Exibição Interativa</title>
+    <title>Lista de Convidados - JS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="header-container">
-            <h1>Lista de Convidados</h1>
-            <p>Exibição interativa das listas de convidados com base em diferentes critérios.</p>
-        </div>
-    </header>
 
-    <main>
-        <div class="list-container">
-            <section id="list-maiusculas" class="list-box">
-                <h2>1. Nomes em Maiúsculas</h2>
-                <ul id="maiusculas"></ul>
-            </section>
+    <h1>Gerenciador de Convidados</h1>
 
-            <section id="list-com-A" class="list-box">
-                <h2>2. Nomes que começam com 'A'</h2>
-                <ul id="com-a"></ul>
-            </section>
+    <div class="container">
+        <section>
+            <h2>1. Todos em Maiúsculo</h2>
+            <ul id="lista-maiuscula"></ul>
+        </section>
 
-            <section id="list-longos" class="list-box">
-                <h2>3. Nomes com mais de 5 Letras</h2>
-                <ul id="longos"></ul>
-            </section>
-        </div>
-        
-        <footer>
-            <p id="total-a" class="footer-text"></p>
-        </footer>
-    </main>
+        <section>
+            <h2>2. Nomes com +5 Letras</h2>
+            <ul id="lista-longos"></ul>
+        </section>
+
+        <section class="destaque">
+            <h2>3. Estatísticas</h2>
+            <p id="contagem-a"></p>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
