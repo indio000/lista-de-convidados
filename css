@@ -1,102 +1,33 @@
-/* Resetando o estilo padrão do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Cor de fundo geral e fonte padrão */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
     color: #333;
-    line-height: 1.6;
-    margin: 0;
 }
 
-/* Estilo do cabeçalho */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+h1 { text-align: center; color: #2c3e50; }
 
-.header-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.header-container p {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-/* Container principal das listas */
-main {
-    padding: 20px;
-}
-
-.list-container {
+.container {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Cada lista de convidados */
-.list-box {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+section {
+    background: white;
     padding: 20px;
-    width: 30%;
-    min-width: 250px;
-}
-
-h2 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    text-align: center;
-    color: #333;
-}
-
-/* Estilizando as listas */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.1rem;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s ease;
-}
-
-ul li:hover {
-    background-color: #f1f1f1;
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    margin-top: 40px;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 250px;
+    flex: 1;
 }
 
-/* Responsividade para dispositivos menores */
-@media (max-width: 768px) {
-    .list-container {
-        flex-direction: column;
-        align-items: center;
-    }
+h2 { border-bottom: 2px solid #3498db; padding-bottom: 10px; font-size: 1.2rem; }
 
-    .list-box {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
+ul { list-style: none; padding: 0; }
+
+li { padding: 5px 0; border-bottom: 1px solid #eee; }
+
+.destaque { background-color: #3498db; color: white; }
+.destaque h2 { border-color: white; }
