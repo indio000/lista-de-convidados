@@ -1,0 +1,51 @@
+// Lista original de convidados
+const convidados = ["Ana", "Bruno", "Amanda", "Carlos", "Beatriz", "Alberto", "Daniela"];
+
+// Função para processar as listas
+function processarListas() {
+    let nomesMaiusculos = [];
+    let nomesComA = [];
+    let nomesLongos = [];
+    let contadorA = 0;
+
+    // Loop com range() para percorrer a lista
+    for (let i = 0; i < convidados.length; i++) {
+        let nome = convidados[i];
+        
+        // Nome em maiúsculas
+        nomesMaiusculos.push(nome.toUpperCase());
+
+        // Contar nomes que começam com 'A'
+        if (nome[0].toUpperCase() === 'A') {
+            nomesComA.push(nome);
+            contadorA++;
+        }
+
+        // Nomes com mais de 5 letras
+        if (nome.length > 5) {
+            nomesLongos.push(nome);
+        }
+    }
+
+    // Exibindo as listas na página
+    exibirLista("list-maiusculas", nomesMaiusculos);
+    exibirLista("list-com-A", nomesComA);
+    exibirLista("list-longos", nomesLongos);
+
+    // Exibindo contador
+    alert(`Total de nomes que começam com a letra 'A': ${contadorA}`);
+}
+
+// Função para exibir as listas no HTML
+function exibirLista(id, lista) {
+    const ul = document.querySelector(`#${id} ul`);
+    ul.innerHTML = '';
+    lista.forEach(nome => {
+        const li = document.createElement('li');
+        li.textContent = nome;
+        ul.appendChild(li);
+    });
+}
+
+// Chama a função para processar e exibir as listas
+processarListas();
