@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listas de Convidados</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Convidados - Listas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Listas de Convidados</h1>
+    <header>
+        <h1>Lista de Convidados</h1>
+    </header>
     
-    <div class="container">
-        <div class="list" id="list-maiusculas">
-            <h2>Lista 1: Nomes em Maiúsculas</h2>
-            <ul></ul>
-        </div>
+    <main>
+        <section id="list-maiusculas">
+            <h2>1. Nomes em Maiúsculas</h2>
+            <ul id="maiusculas"></ul>
+        </section>
 
-        <div class="list" id="list-com-A">
-            <h2>Lista 2: Nomes que começam com 'A'</h2>
-            <ul></ul>
-        </div>
+        <section id="list-com-A">
+            <h2>2. Nomes que começam com 'A'</h2>
+            <ul id="com-a"></ul>
+        </section>
 
-        <div class="list" id="list-longos">
-            <h2>Lista 3: Nomes com mais de 5 Letras</h2>
-            <ul></ul>
-        </div>
-    </div>
+        <section id="list-longos">
+            <h2>3. Nomes com mais de 5 Letras</h2>
+            <ul id="longos"></ul>
+        </section>
+        
+        <footer>
+            <p id="total-a"></p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
